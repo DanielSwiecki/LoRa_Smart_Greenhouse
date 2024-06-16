@@ -15,8 +15,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `table_form` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `date`  DATE NOT NULL DEFAULT CURRENT_DATE,
+  `time` TIME NOT NULL DEFAULT CURRENT_TIME,
   `temperature` FLOAT NOT NULL,
   `humidity` FLOAT NOT NULL,
   `tvoc` INT NOT NULL,
@@ -24,6 +24,6 @@ CREATE TABLE `table_form` (
   `soil_moisture` FLOAT NOT NULL,
   `light` INT NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 COMMIT;
